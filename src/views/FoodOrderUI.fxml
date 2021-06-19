@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="33.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="44.0" prefWidth="282.0" text=" FOOD JOINT" textFill="#982222">
+                           <font>
+                              <Font name="Cambria Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="99.0" prefWidth="435.0" styleClass="shadow" stylesheets="@../values/style.css">
+                     <children>
+                        <TextField prefHeight="51.0" prefWidth="237.0" promptText="Search" styleClass="search-box" stylesheets="@../values/style.css">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="11.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="44.0" styleClass="search-button" stylesheets="@../values/style.css">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="30.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/MagnifyingGlass.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="535.0" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="54.0" prefWidth="335.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="192.0" text="ABCD" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font></Label>
+                              <Label alignment="CENTER" prefHeight="54.0" prefWidth="147.0" text="Rs. 200" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="86.0" prefWidth="880.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="440.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ToggleButton mnemonicParsing="false" prefHeight="52.0" prefWidth="198.0" styleClass="search-button" text="South Indian">
+                                 <font>
+                                    <Font name="Cambria" size="22.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="TgCuisine" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="440.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ToggleButton mnemonicParsing="false" prefHeight="52.0" prefWidth="198.0" styleClass="search-button" text="North Indian" toggleGroup="$TgCuisine">
+                                 <font>
+                                    <Font name="Cambria" size="22.0" />
+                                 </font>
+                              </ToggleButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Separator prefHeight="22.0" prefWidth="880.0" />
+                  <HBox alignment="CENTER" prefHeight="68.0" prefWidth="880.0">
+                     <children>
+                        <ToggleButton mnemonicParsing="false" prefHeight="37.0" prefWidth="113.0" text="Starters" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TgMainMenu" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="38.0" prefWidth="149.0" text="Main Course" toggleGroup="$TgMainMenu">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="38.0" prefWidth="102.0" text="Sweets" toggleGroup="$TgMainMenu">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                        </ToggleButton>
+                        <ToggleButton mnemonicParsing="false" prefHeight="37.0" prefWidth="113.0" text="Drinks" toggleGroup="$TgMainMenu">
+                           <font>
+                              <Font name="Cambria" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ToggleButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefHeight="14.0" prefWidth="880.0" />
+                  <HBox prefHeight="619.0" prefWidth="880.0" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
