@@ -1,0 +1,7 @@
+@font-face{
+src: url(Sarina.ttf);
+}
+
+.root{
+    -font-family: "Sarina";
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="810.0" prefWidth="1315.0" style="-fx-background-color: #7abe74;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConfirmedController">
+    <children>
+      <AnchorPane layoutX="381.0" layoutY="262.0" prefHeight="285.0" prefWidth="553.0" style="-fx-background-color: #1B8057;">
+         <children>
+              <AnchorPane layoutX="32.0" layoutY="26.0" prefHeight="233.0" prefWidth="489.0" style="-fx-background-color: EDE9A3;">
+                  <children>
+                      <Label fx:id="ThLabel" alignment="CENTER" layoutX="17.0" layoutY="32.0" prefHeight="34.0" prefWidth="459.0" text="Thank You for Ordering">
+                          <font>
+                              <Font name="Gill Sans MT" size="23.0" />
+                          </font>
+                      </Label>
+                      <ImageView fitHeight="72.0" fitWidth="95.0" layoutX="209.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../images/checked.png" />
+                          </image>
+                      </ImageView>
+                  <Button fx:id="GoHome" layoutX="195.0" layoutY="177.0" mnemonicParsing="false" onAction="#GoHomeFromConfirmOrder" prefHeight="34.0" prefWidth="98.0" styleClass="button2" stylesheets="@../values/style.css" text="Go To Home">
+                     <font>
+                        <Font name="Gill Sans MT" size="14.0" />
+                     </font>
+                  </Button>
+                  </children>
+              </AnchorPane>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

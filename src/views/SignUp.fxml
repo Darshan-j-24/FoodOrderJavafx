@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="SignUpBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: #1B8057;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="66.0" layoutY="-1.0" prefHeight="143.0" prefWidth="282.0" text=" FOOD JOINT" textFill="#fcebeb" AnchorPane.bottomAnchor="667.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Gill Sans MT Bold" size="43.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="72.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hkg_food.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <HBox fx:id="HboxSignUp" alignment="CENTER" layoutX="42.0" layoutY="247.0" prefHeight="300.0" prefWidth="341.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="341.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/initial.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="810.0" prefWidth="897.0" style="-fx-background-color: #7abe74;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="SignUpBtn" layoutX="387.0" layoutY="560.0" mnemonicParsing="false" onAction="#SignUp" styleClass="button2" stylesheets="@../values/style.css" text="SIGN UP">
+               <font>
+                  <Font name="Gill Sans MT" size="23.0" />
+               </font>
+            </Button>
+            <Button fx:id="GoBackLogin" layoutX="336.0" layoutY="650.0" mnemonicParsing="false" onAction="#GoBackToLogin" prefHeight="46.0" prefWidth="225.0" styleClass="button2" stylesheets="@../values/style.css" text="Go Back To Login Page">
+               <font>
+                  <Font name="Gill Sans MT" size="20.0" />
+               </font>
+            </Button>
+            <HBox alignment="CENTER" layoutY="-2.0" prefHeight="148.0" prefWidth="879.0">
+               <children>
+                  <Label text="SIGN UP">
+                     <font>
+                        <Font name="Gill Sans MT" size="43.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/reg.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="-5.0" layoutY="252.0" prefHeight="322.0" prefWidth="880.0" AnchorPane.bottomAnchor="346.0" AnchorPane.topAnchor="142.0">
+               <children>
+                  <GridPane alignment="CENTER_RIGHT" prefHeight="322.0" prefWidth="671.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.60003662109375" minWidth="10.0" prefWidth="143.8" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.4666625976563" minWidth="10.0" prefWidth="274.2" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.93332519531248" minWidth="10.0" prefWidth="218.466796875" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="118.0" text="USERNAME">
+                           <font>
+                              <Font name="Gill Sans MT" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="63.0" text="EMAIL" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Gill Sans MT" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="128.0" text="PH NUMBER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Gill Sans MT" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="35.0" prefWidth="132.0" text="PASSWORD" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Gill Sans MT" size="23.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="UserNameField" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                        <TextField fx:id="EmailField" prefHeight="39.0" prefWidth="248.0" promptText="Ex: abcd@gmail.com" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="PhNumField" prefHeight="41.0" prefWidth="249.0" promptText="10 Digits" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <PasswordField fx:id="PasswordField" prefHeight="41.0" prefWidth="252.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="UNError" prefHeight="30.0" prefWidth="185.0" textFill="#e40c0c" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="EMError" prefHeight="30.0" prefWidth="186.0" textFill="#e40c0c" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="PHNumError" prefHeight="30.0" prefWidth="195.0" textFill="#e40c0c" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="PWError" prefHeight="30.0" prefWidth="202.0" textFill="#e40c0c" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="8.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets right="34.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
