@@ -1,0 +1,38 @@
+S,1,Happala,../images/happala.jpg,30,#f2f0bf
+S,1,Curd Vada,../images/curdvada.jpg,20,#f2f0bf
+S,1,Maddur Vada,../images/maddurvada.jpg,20,#f2f0bf
+S,2,Masala Dose,../images/MasalaDose.jpeg,50,#f2f0bf
+S,2,Idly Vada,../images/idlyvada.jpeg,40,#f2f0bf
+S,2,Akki Roti,../images/akkirotti.jpeg,50,#f2f0bf
+S,2,South Meals,../images/southmeals.jpg,85,#f2f0bf
+S,2,Chow Chow Bath,../images/chowchowbath.jpg,30,#f2f0bf
+S,2,Pongal,../images/pongal.jpg,40,#f2f0bf
+S,3,Mysore Pak,../images/mysorepak.jpg,20,#f2f0bf
+S,3,Kajjaya,../images/kajjaya.jpg,15,#f2f0bf
+S,3,Kesari Bath,../images/kesaribath.jpg,35,#f2f0bf
+S,3,Holige,../images/holige.jpg,20,#f2f0bf
+S,4,Butter Milk,../images/buttermilk.jpg,30,#f2f0bf
+S,4,Sherbet,../images/sherbet.jpg,25,#f2f0bf
+S,4,Badam Milk,../images/badammilk.jpg,30,#f2f0bf
+S,4,Coffee,../images/coffee.jpg,20,#f2f0bf
+N,1,Paneer Tikka,../images/paneertikka.jpg,50,#f2f0bf
+N,1,Masala Papad,../images/masalapapad.jpg,40,#f2f0bf
+N,1,Samosa,../images/samosa.jpg,15,#f2f0bf
+N,1,Pakora,../images/pakoras.jpg,20,#f2f0bf
+N,2,Roti,../images/roti.jpg,20,#f2f0bf
+N,2,Kulcha,../images/kulcha.jpg,25,#f2f0bf
+N,2,Palak Paneer,../images/palakpaneer.jpg,110,#f2f0bf
+N,2,Veg Kolapuri,../images/vegkolhapuri.jpg,120,#f2f0bf
+N,2,Kaju Masala,../images/kajumasala.jpg,130,#f2f0bf
+N,2,Veg Biryani,../images/vegbiryani.jpg,90,#f2f0bf
+N,2,Mughalai Biryani,../images/mughalaibiryani.jpg,140,#f2f0bf
+N,3,Gulab Jamun,../images/gulabjamun.jpg,30,#f2f0bf
+N,3,Jalebi,../images/jalebi.jpg,20,#f2f0bf
+N,3,Kaju Katli,../images/kajukatli.jpg,50,#f2f0bf
+N,3,Kheer,../images/kheer.jpg,50,#f2f0bf
+N,4,Lassi,../images/lassi.jpg,40,#f2f0bf
+N,4,Mango Lassi,../images/mangolassi.jpeg,45,#f2f0bf
+N,4,Thandai,../images/thandai.jpg,30,#f2f0bf
+N,4,Tea,../images/tea.jpeg,20,#f2f0bf
+N,4,Coffee,../images/coffee.jpg,20,#f2f0bf
+S,4,Tea,../images/tea.jpeg,20,#f2f0bf

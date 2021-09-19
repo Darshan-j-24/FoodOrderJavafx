@@ -1,0 +1,138 @@
+.fruit-item {
+ -fx-background-radius: 200;
+}
+
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.search-button{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+
+.right-bar{
+    -fx-background-color: #D3D3D3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+.chosen-fruit-card{
+    /*-fx-background-color: #fcba03;*/
+    /*-fx-background-color: #EDE9A3;*/
+
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.free-delivery-card{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+.shopping-online-card{
+    -fx-background-color: #BAEAC3;
+    -fx-background-radius: 30;
+}
+
+.fruit-item{
+    -fx-background-color: #f2f0bf
+;
+    -fx-background-radius: 30;
+}
+
+.radio-button > .radio {
+  -fx-background-color: transparent;
+  -fx-background-insets: 0;
+  -fx-background-radius: 0px;
+  -fx-padding: 0.0em; /* 4 8 4 8 */
+}
+.radio-button:selected > .radio > .dot {
+        -fx-background-color: transparent;
+
+}
+.button1{
+
+  -fx-text-align: center;
+  -fx-cursor: hand;
+  -fx-outline: none;
+  -fx-color: #fff;
+  -fx-background-color: #8AB6D6;
+  -fx-border: none;
+  -fx-background-radius: 50px;
+
+}
+
+.button1:hover {
+    -fx-background-color: #3e85bc;
+
+    }
+
+.button1:selected {
+  -fx-background-color: #3e85bc;
+  -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+
+}
+
+.button2{
+
+  -fx-text-align: center;
+  -fx-cursor: hand;
+  -fx-outline: none;
+  -fx-color: #fff;
+  -fx-background-color: #D7C37A;
+  -fx-border: none;
+  -fx-background-radius: 50px;
+  -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 5.0 , 0.0 , 0.0 ,5.0);
+
+}
+
+.button2:hover {
+    -fx-background-color:  #C7AA42
+;
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 8.0 , 0.0 , 0.0 ,8.0);
+    }
+
+.button2:selected {
+  -fx-background-color: #C7AA42
+;
+  -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+
+}
+.button3{
+
+  -fx-text-align: center;
+  -fx-cursor: pointer;
+  -fx-outline: none;
+  -fx-color: #fff;
+  -fx-background-color: #93329E;
+  -fx-border: none;
+  -fx-background-radius: 50px;
+
+}
+
+.button3:hover {
+    -fx-background-color: #440A67;
+
+    }
+
+.button3:selected {
+  -fx-background-color: #440A67;
+  -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}

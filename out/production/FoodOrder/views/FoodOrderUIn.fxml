@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="810.0" prefWidth="1315.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FoodController">
+
+   <children>
+      <BorderPane layoutX="33.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: #1B8057;" styleClass="right-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="82.0" prefWidth="435.0">
+                     <children>
+                        <ImageView fitHeight="72.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/hkg_food.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="277.0" stylesheets="@../values/font.css" text=" FOOD JOINT" textFill="WHITE">
+                           <font>
+                              <Font name="Gill Sans MT Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="82.0" prefWidth="435.0" styleClass="shadow" stylesheets="@../values/style.css">
+                     <children>
+                        <TextField fx:id="searchText" prefHeight="51.0" prefWidth="238.0" promptText="Search" style="-fx-background-radius: 100;" styleClass="search-box" stylesheets="@../values/style.css">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="11.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#search" prefHeight="44.0" prefWidth="44.0" styleClass="search-button" stylesheets="@../values/style.css">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="30.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/MagnifyingGlass.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="SearchError" prefHeight="30.0" prefWidth="151.0" text="Match Not Found" textFill="#830000">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox fx:id="ChosenFoodCard" alignment="TOP_CENTER" prefHeight="457.0" prefWidth="341.0" stylesheets="@../values/style.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="68.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="FoodNamelabel" alignment="CENTER" prefHeight="74.0" prefWidth="190.0" text="Masala Dose" textFill="#151515" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="22.0" />
+                                 </font></Label>
+                              <Label fx:id="FoodPricelabel" alignment="CENTER" prefHeight="80.0" prefWidth="146.0" text="Rs. 200" textFill="#131212" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="238.0" prefWidth="253.0">
+                           <children>
+                              <Label prefHeight="160.0" prefWidth="176.0" style="-fx-background-radius: 10;">
+                                 <graphic>
+                                    <ImageView fx:id="FoodImage" fitHeight="195.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" style="-fx-scale-z: 10;">
+                                       <image>
+                                          <Image url="@../images/MasalaDose.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="Serve" alignment="CENTER" prefHeight="54.0" prefWidth="109.0" text="Quantity :" textFill="#0b0b0b">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="Quantity" editable="true" onAction="#QuantitySelect" prefHeight="26.0" prefWidth="87.0" promptText="1" visibleRowCount="5" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="66.0" prefWidth="335.0">
+                           <children>
+                              <Button fx:id="AddToCart" alignment="CENTER" mnemonicParsing="false" prefHeight="42.0" prefWidth="117.0" styleClass="button2" stylesheets="@../values/style.css" text="Add to cart">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label fx:id="AlertLabel" text="Already inside the cart" textFill="#d11717">
+                           <font>
+                              <Font name="Gill Sans MT" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="420.0">
+                     <children>
+                        <Button fx:id="GoToCart" alignment="CENTER" mnemonicParsing="false" onAction="#goToCart" prefHeight="52.0" prefWidth="155.0" stylesheets="@../values/style.css" text="Go to cart">
+                           <styleClass>
+                              <String fx:value="add-btn" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #7abe74;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="51.0" prefWidth="880.0">
+                     <children>
+                        <Label fx:id="welcomeUser" alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="622.0" text="Welcome User" textFill="#0b0b0b">
+                           <font>
+                              <Font name="Gill Sans MT" size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets left="18.0" />
+                           </padding>
+                        </Label>
+                        <Button fx:id="logOut" mnemonicParsing="false" onAction="#LogOut" prefHeight="35.0" prefWidth="42.0" styleClass="button2" stylesheets="@../values/style.css">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="200.0" top="6.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="86.0" prefWidth="880.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="440.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <RadioButton fx:id="SouthIndian" mnemonicParsing="false" prefHeight="60.0" prefWidth="205.0" styleClass="button2" stylesheets="@../values/style.css" text="South Indian" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="30.0" />
+                                 </HBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="TgCuisine" />
+                                 </toggleGroup>
+                                 <padding>
+                                    <Insets left="18.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="440.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <RadioButton fx:id="NorthIndian" mnemonicParsing="false" prefHeight="60.0" prefWidth="216.0" styleClass="button2" stylesheets="@../values/style.css" text="North Indian" toggleGroup="$TgCuisine">
+                                 <font>
+                                    <Font name="Gill Sans MT" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="17.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="68.0" prefWidth="880.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <RadioButton fx:id="Starters" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" styleClass="button2" stylesheets="@../values/style.css" text="Starters" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TgMainMenu" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="MainCourse" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" styleClass="button2" stylesheets="@../values/style.css" text="Main Course" textAlignment="CENTER" toggleGroup="$TgMainMenu">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="9.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="Sweets" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" styleClass="button2" stylesheets="@../values/style.css" text="Sweets" toggleGroup="$TgMainMenu">
+                           <HBox.margin>
+                              <Insets right="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="32.0" />
+                           </padding>
+                        </RadioButton>
+                        <RadioButton fx:id="Drinks" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" styleClass="button2" stylesheets="@../values/style.css" text="Drinks" textAlignment="CENTER" toggleGroup="$TgMainMenu">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="34.0" />
+                           </padding>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="619.0" prefWidth="880.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="Scroll" prefHeight="611.0" prefWidth="786.0" styleClass="transparent" stylesheets="@../values/style.css">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="44.0" prefWidth="122.0" stylesheets="@../values/style.css">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </children></HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
