@@ -9,7 +9,7 @@ public class SQLConnection {
             try
             {
 //                Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/swingapp","root","14myindia");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/swingapp","root","");
                 return conn;
             }
             catch(Exception e)
